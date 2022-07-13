@@ -14,7 +14,7 @@ function AgentCard(props) {
   }, []);
 
   return (
-    <TouchableOpacity style={styles.cardContainer}>
+    <TouchableOpacity onPress={() => props.onPress()} style={styles.cardContainer}>
       <View
         style={styles.imageContainer}>
         <Image

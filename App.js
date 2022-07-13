@@ -40,8 +40,19 @@ function App(props) {
   })
 
   const renderItem = (item) => (
-    <AgentCard agentsData={item} />
+    <AgentCard onPress={() => navigateToDetails(item.item)} agentsData={item} />
   )
+
+  function navigateToDetails(item) {
+    Navigation.push(props.componentId, {
+      component: {
+        name: 'AgentDetails',
+        passProps: {
+          item
+        }
+      }
+    })
+  }
 
   return (
     <View style={{flex: 1}}>
