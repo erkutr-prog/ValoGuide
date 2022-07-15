@@ -18,7 +18,7 @@ function AgentDetails(props) {
         title: {
           text: props.item.displayName
         }
-      },
+      }
     })
     if (props.item.fullPortrait && props.item.fullPortraitV2) {
       let dataArray = [];

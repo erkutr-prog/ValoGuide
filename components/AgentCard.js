@@ -22,9 +22,8 @@ function AgentCard(props) {
           resizeMode="contain"
           source={{uri: props.agentsData.item.displayIcon}}
         />
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'center'}}>
         <Text style={styles.agentText} >{props.agentsData.item.displayName}</Text>
-        {/* <Image style={{width: 20, height: 20}} source={{uri: agentRole.current['displayIcon']}}/> */}
         </View>
       </View>
     </TouchableOpacity>
