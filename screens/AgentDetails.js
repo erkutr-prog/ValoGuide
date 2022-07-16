@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, 
     flexDirection: 'column', 
-    backgroundColor: '#FD4556', 
+    backgroundColor: '#FFFFFF', 
     paddingBottom: 10
   },
   carouselContainer: {
@@ -171,7 +171,9 @@ const styles = StyleSheet.create({
   skillItemContainer: {
     flexDirection: 'row', 
     backgroundColor: '#FD4556', 
-    padding: 10
+    padding: 10,
+    borderRadius: 30,
+    marginHorizontal: 10
   }
 })
 

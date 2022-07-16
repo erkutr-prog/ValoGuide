@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {StyleSheet, Text, View, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 import AgentCard from '../components/AgentCard';
@@ -16,47 +16,41 @@ function Agents(props) {
       },
     });
     fetchAgents();
-
   }, [fetchAgents]);
 
   const fetchAgents = useCallback(async () => {
     const options = {
       method: 'GET',
       headers: {
-        'language': 'tr-TR',
-        'isPlayableCharacter': true
+        language: 'tr-TR',
+        isPlayableCharacter: true,
       },
     };
 
-    const response = await fetch(
-      'https://valorant-api.com/v1/agents',
-      options,
-    )
+    const response = await fetch('https://valorant-api.com/v1/agents', options)
       .then(response => response.json())
       .then(response => setAgentsData(response.data))
-      .catch(err => console.error(err))
-      //console.log("data========", response.data);
-      //setAgentsData(response.data);
-  })
+      .catch(err => console.error(err));
+  });
 
-  const renderItem = (item) => (
+  const renderItem = item => (
     <AgentCard onPress={() => navigateToDetails(item.item)} agentsData={item} />
-  )
+  );
 
   function navigateToDetails(item) {
     Navigation.push(props.componentId, {
       component: {
         name: 'AgentDetails',
         passProps: {
-          item
+          item,
         },
         options: {
-            bottomTabs: {
-                visible: false
-            }
-        }
-      }
-    })
+          bottomTabs: {
+            visible: false,
+          },
+        },
+      },
+    });
   }
 
   return (
@@ -70,24 +64,5 @@ function Agents(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default Agents;
