@@ -34,7 +34,27 @@ function Weapons(props) {
       .catch(err => console.error(err));
   });
 
-  const renderItem = ({item}) => <WeaponCard item={item} />;
+  const renderItem = ({item}) => <WeaponCard onPress={() => navigateToDetails(item)} item={item} />;
+
+  const navigateToDetails = ((item) => {
+    if (item.weaponStats != null) {
+      Navigation.push(props.componentId, {
+        component: {
+          name: 'WeaponDetails',
+          passProps: {
+            data: item
+          },
+          options: {
+            topBar: {
+              title: {
+                text: item.displayName
+              }
+            }
+          }
+        }
+      })
+    }
+  }) 
 
   return (
     <View style={styles.container}>

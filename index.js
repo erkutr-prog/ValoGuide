@@ -6,6 +6,7 @@ import Agents from './screens/Agents';
 import Maps from './screens/Maps';
 import Weapons from './screens/Weapons';
 import MapDetails from './screens/MapDetails';
+import WeaponDetails from './screens/WeaponDetails';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -17,6 +18,7 @@ Navigation.registerComponent('AgentDetails', () => AgentDetails);
 Navigation.registerComponent('Maps', () => Maps);
 Navigation.registerComponent('MapDetails', () => MapDetails);
 Navigation.registerComponent('Weapons', () => Weapons);
+Navigation.registerComponent('WeaponDetails', () => WeaponDetails);
 
 const agentIcon = MaterialCommunityIcons.getImageSourceSync(
   'account-box',

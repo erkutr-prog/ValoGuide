@@ -5,7 +5,7 @@ var colors = require('./../src/colors.js');
 
 function WeaponCard(props) {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity onPress={() => props.onPress()} style={styles.container}>
         <Image style={styles.image} resizeMode='contain' source={{uri: props.item.displayIcon}}/>
         <View style={styles.textContainer}>
             <Text style={styles.texts}>{props.item.displayName}</Text>
