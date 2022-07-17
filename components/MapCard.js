@@ -7,13 +7,14 @@ import {
   StyleSheet,
 } from 'react-native';
 import React, {useEffect} from 'react';
+import colors from '../src/colors';
 
 function MapCard(props) {
   return (
     <TouchableOpacity onPress={() => props.onPress()} style={styles.container}>
       <Image style={styles.image} source={{uri: props.item.listViewIcon}} />
       <View style={styles.textContainer}>
-        <Text>{props.item.displayName}</Text>
+        <Text style={styles.mapName}>{props.item.displayName}</Text>
         <Text style={styles.coordinates}>{props.item.coordinates}</Text>
       </View>
     </TouchableOpacity>
@@ -32,12 +33,18 @@ const styles = StyleSheet.create({
     width: Dimensions.get('screen').width - 15,
   },
   textContainer: {
-    margin: 5,
     flexDirection: 'row',
     justifyContent: 'center',
+    backgroundColor: colors.TEXT_CONTAINER_BACKGROUND,
   },
   coordinates: {
     marginLeft: 'auto',
+    color: colors.TEXT,
+    alignSelf: 'center',
+  },
+  mapName: {
+    color: '#FFFBF5',
+    margin: 5,
   },
 });
 

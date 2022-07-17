@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    backgroundColor: '#FCF8E8',
+    backgroundColor: '#FD4556',
     margin: 10,
     flexDirection: 'column',
   },
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
   },
   agentText: {
     alignSelf: 'center', 
-    fontWeight: '500'
+    fontWeight: '500',
+    color: '#FFFBF5'
   }
 });
 

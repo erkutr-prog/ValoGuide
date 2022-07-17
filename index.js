@@ -10,6 +10,8 @@ import MapDetails from './screens/MapDetails';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+var colors = require('./src/colors.js');
+
 Navigation.registerComponent('Agents', () => Agents);
 Navigation.registerComponent('AgentDetails', () => AgentDetails);
 Navigation.registerComponent('Maps', () => Maps);
@@ -125,4 +127,15 @@ Navigation.events().registerAppLaunchedListener(() => {
       },
     },
   });
+});
+
+Navigation.setDefaultOptions({
+  topBar: {
+    background: {
+      color: colors.PAGE_BACKGROUND,
+    },
+  },
+  bottomTabs: {
+    backgroundColor: colors.PAGE_BACKGROUND,
+  },
 });

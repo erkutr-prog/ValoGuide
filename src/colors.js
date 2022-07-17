@@ -1,0 +1,8 @@
+'use-strict';
+
+module.exports = {
+  PAGE_BACKGROUND: '#FCF8E8',
+  CONTAINER_BACKGROUND: '#FD4556',
+  TEXT_CONTAINER_BACKGROUND: '#BD3944',
+  TEXT: '#FFFBF5',
+};

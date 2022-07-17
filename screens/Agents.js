@@ -1,8 +1,10 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, StyleSheet} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 import AgentCard from '../components/AgentCard';
+
+var colors = require('./../src/colors.js');
 
 function Agents(props) {
   const [agentsData, setAgentsData] = useState([]);
@@ -54,7 +56,7 @@ function Agents(props) {
   }
 
   return (
-    <View style={{flex: 1}}>
+    <View style={styles.container}>
       <FlatList
         data={agentsData}
         numColumns={2}
@@ -64,5 +66,12 @@ function Agents(props) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, 
+    backgroundColor: colors.PAGE_BACKGROUND
+  }
+})
 
 export default Agents;
