@@ -2,8 +2,9 @@ ValoGuide
 
 Valorant gamer guide application made with  https://valorant-api.com/ 
 
-![Alt text](/src/assets/Agents.png?raw=true "Agents Page")
+<p align="float-left">
+  <img src="https://github.com/erkutr-prog/ValoGuide/blob/main/src/assets/Agents.png" width="200" title="hover text">
+  <img src="https://github.com/erkutr-prog/ValoGuide/blob/main/src/assets/Weapons.png" width="200" title="hover text">
+  <img src="https://github.com/erkutr-prog/ValoGuide/blob/main/src/assets/Maps.png" width="200" title="hover text">
 
-![Alt text](/src/assets/Maps.png?raw=true "Maps Page")
-
-![Alt text](/src/assets/Weapons.png?raw=true "Weapons Page")
+</p>
