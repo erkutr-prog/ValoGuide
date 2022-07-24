@@ -1,6 +1,5 @@
 import {Navigation} from 'react-native-navigation';
 
-import App from './App';
 import AgentDetails from './screens/AgentDetails';
 import Agents from './screens/Agents';
 import Maps from './screens/Maps';
